@@ -2,7 +2,7 @@
   "name": "my-dao",
   "version": "3.0.0",
   "private": false,
-  "homepage": "/",
+  "homepage": "https://sheltonjohnson.com/projects/dao/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -22,5 +22,8 @@
     "react-dom": "^18.0.2",
     "react-router-dom": "^6.11.2",
     "vite": "^3.1.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }

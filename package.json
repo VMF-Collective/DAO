@@ -2,9 +2,11 @@
   "name": "my-dao",
   "version": "3.0.0",
   "private": false,
-  "homepage": "https://sheltonjohnson.com/projects/dao/",
+  "homepage": "http://VMF-Collective.github.io/DAO",
   "scripts": {
     "dev": "vite",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
     "build": "vite build",
     "serve": "vite preview"
   },

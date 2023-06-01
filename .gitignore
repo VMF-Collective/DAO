@@ -1,9 +1,6 @@
 node_modules
-<<<<<<< HEAD
-README 2.md
-=======
 node_modules
->>>>>>> cba2dcc (Add git ignore)
 src/.env
 README 2.md
 README.md
+scripts/

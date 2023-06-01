@@ -9,6 +9,7 @@ export default defineConfig({
   },
   define: {
     global: "globalThis",
+    base: "/dao/",
     "process.env": {},
   },
 })

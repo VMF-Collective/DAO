@@ -2,7 +2,7 @@
   "name": "my-dao",
   "version": "3.0.0",
   "private": false,
-  "homepage": "http://sheltonjoomla.github.io/VMF-Collective/DAO",
+  "homepage": "http://vmf-collective.github.io/dao",
   "scripts": {
     "dev": "vite",
     "predeploy":"npm run build",

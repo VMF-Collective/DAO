@@ -2,7 +2,6 @@
   "name": "my-dao",
   "version": "3.0.0",
   "private": false,
-  "homepage": "http://vmf-collective.github.io/dao",
   "scripts": {
     "dev": "vite",
     "predeploy":"npm run build",

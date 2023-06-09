@@ -1,4 +1,3 @@
-// start new file
 import { useAddress, ConnectWallet, Web3Button, useContract, useNFTBalance, ThirdwebNftMedia, useNFT } from '@thirdweb-dev/react';
 import { useState, useEffect, useMemo } from 'react';
 import { AddressZero } from "@ethersproject/constants";

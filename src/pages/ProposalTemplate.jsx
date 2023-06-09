@@ -4,17 +4,10 @@ import { proposalData } from "../constants/proposalData";
 import  CommunityDetailsSideBar  from "../components/CommunityDetailsSideBar";
 // import { Voting } from "../components/Voting2";
 
-import { NFT_CONTRACT_ADDRESS } from "../constants/addresses";
 import "../styles/proposalDetails.css"
 
 
 export default function ProjectTemplate() {
-
-  const { contract } = useContract(NFT_CONTRACT_ADDRESS);
-  const tokenId = 0;
-  const { data: nft, isLoading } = useNFT(contract, tokenId);
-  const { data: metadata, isLoading: loadingMetadata } = useContractMetadata(contract);
-
   return (
     <>
       <div className="container">

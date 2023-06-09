@@ -1,15 +1,17 @@
 
 import { communityData } from "../constants/communityData.jsx";
 import { ThirdwebNftMedia, useContract, useNFT, useContractMetadata } from '@thirdweb-dev/react';
+import {NFT_CONTRACT_ADDRESS}  from "../constants/addresses.jsx";
 
 export default function CommunityDetailsSideBar(){
-  const { contract } = useContract(NFT_CONTRACT_ADDRESS);
+
+  const NFT_CONTRACT_ADDRESS_IMPORT = NFT_CONTRACT_ADDRESS;
+  const { contract } = useContract(NFT_CONTRACT_ADDRESS_IMPORT);
   const tokenId = 0;
   const { data: nft, isLoading } = useNFT(contract, tokenId);
   const { data: metadata, isLoading: loadingMetadata } = useContractMetadata(contract);
     return (
       <div>
-        <h1>CommunityDetailsSideBar</h1>
         {!loadingMetadata && ( 
               <div>
               <h3>{metadata?.name}</h3>

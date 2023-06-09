@@ -1,15 +1,19 @@
-// start new file
+// to do: this page will replace the MyCommunity page 
 import { useAddress, ConnectWallet, Web3Button, useContract, useNFTBalance } from '@thirdweb-dev/react';
 import { useState, useEffect, useMemo } from 'react';
 import { AddressZero } from "@ethersproject/constants";
+import  CommunityDetailsSideBar  from "../components/CommunityDetailsSideBar";
 
 
-export default function Community() {
+export default function CommunityBK() {
   const address = useAddress();
   const editionDropAddress = "0x364f65C9309BCCC0998B7B8aEb9410FD26ead3f1";
   const { contract: editionDrop } = useContract(editionDropAddress, "edition-drop");
   const { contract: token } = useContract('0x1E1aECDC3C932c4B3490203326A3e2e178C94315', 'token');
   const { contract: vote } = useContract("0x2FDaBe3f3Eaa7c6442faD20ccDF632280a46ef56", "vote");
+  console.log(vote);
+  // hard code proposal is 
+  const proposalID_hardcode = 1;
   
   
   // Hook to check if the user has our NFT
@@ -20,8 +24,6 @@ export default function Community() {
     
    }, [nftBalance])
 
-    
-  // Memebers stuff sj 
   // Holds the amount of token each member has in state.
 const [memberTokenAmounts, setMemberTokenAmounts] = useState([]);
 // The array holding all of our members addresses.
@@ -33,10 +35,12 @@ const shortenAddress = (str) => {
 const [proposals, setProposals] = useState([]);
 const [isVoting, setIsVoting] = useState(false);
 const [hasVoted, setHasVoted] = useState(false);
+console.log('🚀 ~ file: CommunityBK.jsx ~ line 86 ~ proposals', proposals);
 
 // Retrieve all our existing proposals from the contract.
 useEffect(() => {
   if (!hasClaimedNFT) {
+    console.log(`🦊 User has not claimed NFT yet`);
     return;
   }
 
@@ -141,17 +145,18 @@ const memberList = useMemo(() => {
 
 
 
-if (hasClaimedNFT) {
+
   
   return (
-    <div className="wrapper">
+    <div className="container">
           <div className="member-page">
-            <h1>Your Community : Westend </h1>
+           
+          
             <div>
               <div>
+              <CommunityDetailsSideBar />
                 <h2>Member List</h2>
-    <table className="card">
-
+                <table className="card">
       <thead>
         <tr>
           <th>Name</th>
@@ -174,6 +179,8 @@ if (hasClaimedNFT) {
     </table>
   </div>
   <div>
+
+
     <h2>All Proposals</h2>
     <form
       onSubmit={async (e) => {
@@ -313,69 +320,5 @@ if (hasClaimedNFT) {
       </div>
 
   );
-} else {
-  return (
-    <>
-    <h1>Please Join a Community</h1>
 
-
-    <div className='cardWrapper'>
-    <div className="card">
-  {/* <img class="card-img-top" src="..." alt="Card image cap"> */}
-  <div className="card-body">
-    <h2 className="card-title">Legacy Park</h2>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="/join" className="btn btn-primary">Go somewhere</a>
-    <Web3Button 
-          contractAddress={editionDropAddress}
-          action={contract => {
-            contract.erc1155.claim(0, 1)
-          }}
-          onSuccess={() => {
-            console.log(`🌊 Successfully Minted! Check it out on OpenSea: https://testnets.opensea.io/assets/${editionDrop.getAddress()}/0`);
-          }}
-          onError={error => {
-            console.error("Failed to mint NFT", error);
-          }}
-        >
-          Join this Community
-        </Web3Button>
-  </div>
-</div>
-<div className="card">
-  {/* <img class="card-img-top" src="..." alt="Card image cap"> */}
-  <div className="card-body">
-    <h2 className="card-title">Westend</h2>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="/join" className="btn btn-primary">Terms</a>
-    <Web3Button 
-          contractAddress={editionDropAddress}
-          action={contract => {
-            contract.erc1155.claim(0, 1)
-          }}
-          onSuccess={() => {
-            console.log(`🌊 Successfully Minted! Check it out on OpenSea: https://testnets.opensea.io/assets/${editionDrop.getAddress()}/0`);
-          }}
-          onError={error => {
-            console.error("Failed to mint NFT", error);
-          }}
-        >
-          Join this Community
-        </Web3Button>
-  </div>
-</div>
-    </div>
-
-
-
-
-
-
-
-
-
-  
-    </>
-  );
-}
 }

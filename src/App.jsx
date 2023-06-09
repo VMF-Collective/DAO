@@ -11,6 +11,7 @@ import Home from './pages/Home';
 import Members from './pages/Members';
 import Communities from './pages/Communities';
 import MyCommunity from './pages/MyCommunity';
+import CommunityBK from './pages/CommunityBK';
 import Join from './pages/Join';
 // import Login from './pages/Login';
 import ProposalTemplate from './pages/ProposalTemplate';
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="/Members" element={<Members />} />
           <Route path="/Communities" element={<Communities />} />
           <Route path="/MyCommunity" element={<MyCommunity />} />
+          <Route path="/CommunityBK" element={<CommunityBK />} />
           <Route path="/Join" element={<Join />} />
           <Route path="/ProposalTemplate" element={<ProposalTemplate />} />
           <Route path="/CreateProposal" element={<CreateProposal />} />

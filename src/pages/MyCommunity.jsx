@@ -221,7 +221,7 @@ export default function MyCommunity() {
       <div className='container'>
         <div className="row">
           <div className="col-sm text-center">
-          <h1>My Community</h1>
+          <h1>My Community Show Community and all proposals</h1>
             </div>
         </div>
         
@@ -235,59 +235,12 @@ export default function MyCommunity() {
       </div>
     </div>
   </div>
-  <div className="col">
-    <div className="card">
-      <img src="..." className="card-img-top" alt="..."/>
-      <div className="card-body">
-        <h5 className="card-title">
-        <Log value={communityData2} /></h5>
-        
-        
 
-        <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div className="col">
-    <div className="card">
-      <img src="..." className="card-img-top" alt="..."/>
-      <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div>
-  <div className="col">
-    <div className="card">
-      <img src="..." className="card-img-top" alt="..."/>
-      <div className="card-body">
-        <h5 className="card-title">Card title</h5>
-        <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
+
+
 </div>
 
 
-        <div className='cardWrapper'>
-          <div className="card">
-            {/* <img className="card-img-top" src="..." alt="Card image cap"> */}
-            <div className="card-body">
-              <h2 className="card-title">Legacy Park</h2>
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#">View Proposals in this Community</a>
-    
-            </div>
-          </div>
-          <div className="card">
-            {/* <img className="card-img-top" src="..." alt="Card image cap"> */}
-            <div className="card-body">
-              <h2 className="card-title">Westend</h2>
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-            </div>
-          </div>
-        </div>
 
 
 

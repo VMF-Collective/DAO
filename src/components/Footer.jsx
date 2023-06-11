@@ -10,7 +10,7 @@ export default function Footer(){
             <div className="col-lg-7 mb-3">
               <div className="text-center">
                 <a className="logo logo-footer" href="#">
-                  <img src="/src/assets/imgs/logo.png" height={78} alt="" />
+                  <img src="/src/assets/imgs/white-logo-vmf.png" height={78} alt="" />
                 </a>
                 <p className="text-muted para-desc mx-auto mt-3">Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap4 html page.</p>
                 <ul className="list-unstyled social-icon social mb-0 mt-4">

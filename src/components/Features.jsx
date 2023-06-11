@@ -21,7 +21,7 @@ export default function Features(){
               <div className="p-4 rounded position-relative overflow-hidden">
                 <div className="icon text-primary">
                   <i className="uim uim-download-alt" />
-                  <img src="/src/themes/appgen/images/shape-1.png" className="avatar avatar-small icon-shape" alt="" />
+                  <img src="/assets/themes/appgen/images/shape-1.png" className="avatar avatar-small icon-shape" alt="" />
                 </div>
                 <div className="content mt-4">
                   <h5><a href="javascript:void(0)" className="title text-dark">Create Account</a></h5>
@@ -70,7 +70,7 @@ export default function Features(){
       <div className="row align-items-center">
         <div className="col-md-6">
           <div className="feature position-relative">
-            <img src="/src/themes/appgen/images/saas/features-1.png" className="img-fluid" alt="" />
+            <img src="/assets/themes/appgen/images/saas/features-1.png" className="img-fluid" alt="" />
           </div>
         </div>
         <div className="col-md-6 mt-4 mt-sm-0 pt-2 pt-sm-0">

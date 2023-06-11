@@ -27,10 +27,10 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './styles/Comments.css';
 
 
-import './themes/appgen/css/bootstrap.min.css';
-import './themes/appgen/css/materialdesignicons.min.css';
-import './themes/appgen/css/tobii.min.css';
-import './themes/appgen/css/style.css';
+import './assets/themes/appgen/css/bootstrap.min.css';
+import './assets/themes/appgen/css/materialdesignicons.min.css';
+import './assets/themes/appgen/css/tobii.min.css';
+import './assets/themes/appgen/css/style.css';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";

@@ -6,7 +6,7 @@ export default function Features(){
       <div className="row">
         <div className="col-lg-4 col-md-6 col-12 mb-4 pb-2">
           <div className="card blog-post border-0 rounded overflow-hidden shadow">
-            <img src="/src/themes/appgen/images/blog/01.jpg" className="img-fluid" alt="missing-image" />
+            <img src="/src/assets/themes/appgen/images/blog/01.jpg" className="img-fluid" alt="missing-image" />
             <div className="card-body p-4">
               <h5 className="mb-3"><a href="javascript:void(0)" className="text-dark title">Install Tinc and VPN Setup on Debian &amp; Ubuntu</a></h5>
               <p className="text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -16,7 +16,7 @@ export default function Features(){
         </div>
         <div className="col-lg-4 col-md-6 col-12 mb-4 pb-2">
           <div className="card blog-post border-0 rounded overflow-hidden shadow">
-            <img src="/src/themes/appgen/images/blog/02.jpg" className="img-fluid" alt="missing-image" />
+            <img src="/src/assets/themes/appgen/images/blog/02.jpg" className="img-fluid" alt="missing-image" />
             <div className="card-body p-4">
               <h5 className="mb-3"><a href="javascript:void(0)" className="text-dark title">Responsive &amp; Mobile Design</a></h5>
               <p className="text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -26,7 +26,7 @@ export default function Features(){
         </div>
         <div className="col-lg-4 col-md-6 col-12 mb-4 pb-2">
           <div className="card blog-post border-0 rounded overflow-hidden shadow">
-            <img src="/src/themes/appgen/images/blog/03.jpg" className="img-fluid" alt="missing-image" />
+            <img src="/src/assets/themes/appgen/images/blog/03.jpg" className="img-fluid" alt="missing-image" />
             <div className="card-body p-4">
               <h5 className="mb-3"><a href="javascript:void(0)" className="text-dark title">Initial Server Configuration &amp; Setup on Debian</a></h5>
               <p className="text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -36,7 +36,7 @@ export default function Features(){
         </div>
         <div className="col-lg-4 col-md-6 col-12 mb-4 pb-2">
           <div className="card blog-post border-0 rounded overflow-hidden shadow">
-            <img src="/src/themes/appgen/images/blog/04.jpg" className="img-fluid" alt="missing-image" />
+            <img src="/src/assets/themes/appgen/images/blog/04.jpg" className="img-fluid" alt="missing-image" />
             <div className="card-body p-4">
               <h5 className="mb-3"><a href="javascript:void(0)" className="text-dark title">Install Tinc and VPN Setup on Debian &amp; Ubuntu</a></h5>
               <p className="text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -46,7 +46,7 @@ export default function Features(){
         </div>
         <div className="col-lg-4 col-md-6 col-12 mb-4 pb-2">
           <div className="card blog-post border-0 rounded overflow-hidden shadow">
-            <img src="/src/themes/appgen/images/blog/05.jpg" className="img-fluid" alt="missing-image" />
+            <img src="/src/assets/themes/appgen/images/blog/05.jpg" className="img-fluid" alt="missing-image" />
             <div className="card-body p-4">
               <h5 className="mb-3"><a href="javascript:void(0)" className="text-dark title">Responsive &amp; Mobile Design</a></h5>
               <p className="text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -56,7 +56,7 @@ export default function Features(){
         </div>
         <div className="col-lg-4 col-md-6 col-12 mb-4 pb-2">
           <div className="card blog-post border-0 rounded overflow-hidden shadow">
-            <img src="/src/themes/appgen/images/blog/06.jpg" className="img-fluid" alt="missing-image" />
+            <img src="/src/assets/themes/appgen/images/blog/06.jpg" className="img-fluid" alt="missing-image" />
             <div className="card-body p-4">
               <h5 className="mb-3"><a href="javascript:void(0)" className="text-dark title">Initial Server Configuration &amp; Setup on Debian</a></h5>
               <p className="text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -66,7 +66,7 @@ export default function Features(){
         </div>
         <div className="col-lg-4 col-md-6 col-12 mb-4 pb-2">
           <div className="card blog-post border-0 rounded overflow-hidden shadow">
-            <img src="/src/themes/appgen/images/blog/07.jpg" className="img-fluid" alt="missing-image" />
+            <img src="/src/assets/themes/appgen/images/blog/07.jpg" className="img-fluid" alt="missing-image" />
             <div className="card-body p-4">
               <h5 className="mb-3"><a href="javascript:void(0)" className="text-dark title">Install Tinc and VPN Setup on Debian &amp; Ubuntu</a></h5>
               <p className="text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>

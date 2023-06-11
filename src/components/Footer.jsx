@@ -33,7 +33,7 @@ export default function Footer(){
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 text-center">
-              <p className="mb-0 footer-text para-desc mx-auto">©  <span className="text-reset">VMF DAO</span>. Design with <i className="mdi mdi-heart text-danger" /> by <a href="http://shreethemes.in" target="_blank" className="text-reset">NetDreams</a>.</p>
+              <p className="mb-0 footer-text para-desc mx-auto">©  <span className="text-reset">VMF DAO</span>. Design with <i className="mdi mdi-heart text-danger" /> by <a href="http://shreethemes.in" target="_blank" className="text-reset">NetDreams Media</a>.</p>
             </div>
           </div>
         </div>

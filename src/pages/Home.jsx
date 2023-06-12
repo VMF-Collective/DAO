@@ -1,12 +1,12 @@
 import Partners from '../components/Partners';
 import Features from '../components/Features';
-import Header2 from '../components/Header2';
+import Header from '../components/Header';
 
 
 export default function Home() {
   return (
     <div>
-      <Header2 />
+      <Header />
       <Partners />  
       <Features />
     </div>

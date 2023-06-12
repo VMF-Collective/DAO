@@ -2,6 +2,10 @@
 
 
 export default function Footer(){
+
+  const imgPath = '/assets/imgs/';
+  // const imgPath = process.env.ASSET_URL + '/assets/imgs/logo.png';
+
     return (
       <div>
       <footer className="bg-dark py-5">
@@ -10,9 +14,9 @@ export default function Footer(){
             <div className="col-lg-7 mb-3">
               <div className="text-center">
                 <a className="logo logo-footer" href="#">
-                  <img src="/src/assets/imgs/white-logo-vmf.png" height={78} alt="" />
+                  <img src={imgPath + 'white-logo-vmf.png'} height={78} alt="" />
                 </a>
-                <p className="text-muted para-desc mx-auto mt-3">Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap4 html page.</p>
+                <p className="text-muted para-desc mx-auto mt-3"> Public Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap4 html page.</p>
                 <ul className="list-unstyled social-icon social mb-0 mt-4">
                   <li className="list-inline-item"><a href="javascript:void(0)" className="rounded"><i data-feather="facebook" className="fea icon-sm fea-social" /></a></li>
                   <li className="list-inline-item"><a href="javascript:void(0)" className="rounded"><i data-feather="instagram" className="fea icon-sm fea-social" /></a></li>

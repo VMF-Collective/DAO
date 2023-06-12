@@ -1,18 +1,53 @@
-// import { API_URL } from '../constants/constants';
+// import { ConnectWallet } from '@thirdweb-dev/react';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
     return (
+        <header id="topnav" className="defaultscroll sticky bg-white">
+            <div className="container">
+                <div>
+                    <a className="logo" href="index.html">
+                        <img src="/src/assets/imgs/logo.png" height={52} alt="" />
+                    </a>
+                </div>
+                <div className="buy-button">
+                <Link to="/Join" className="btn btn-primary">Join a Community</Link>
+                </div>
+              
+                <div className="menu-extras">
+                    <div className="menu-item">
+                        {/* Mobile menu toggle*/}
+                        <a className="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                            <div className="lines">
+                                <span />
+                                <span />
+                                <span />
+                            </div>
+                        </a>
+                        {/* End mobile menu toggle*/}
+                    </div>
+                </div>
+                <div id="navigation" style={{display: "block"}}>
 
-        <ul className="nav nav-pills nav-fill">
-            <li className="nav-item active"><Link to="/" className="nav-link">Home</Link></li>
-            <li className="nav-item"><Link to="/ProposalTemplate" className="nav-link">Proposal Details Page</Link></li>
-            <li className="nav-item"><Link to="/Communities" className="nav-link">Communities</Link></li>
-            {/* <li className="nav-item"><Link to="/Members" className="nav-link">Members</Link></li> */}
-            <li className="nav-item"><Link to="/MyCommunity" className="nav-link" >My Community</Link></li>
-            <li className="nav-item"><Link to="/Join" className="nav-link">Join</Link></li>
-        </ul>
+    
+                 
 
+                    <ul className="navigation-menu">
+                        <li className="has-submenu parent-menu-item">
+                        <Link to="/" className="sub-menu-item">Home</Link>
+                        </li>
+                        <li className="has-submenu parent-menu-item">
+                            <a href="javascript:void(0)">My Community</a><span className="menu-arrow" />
+                            <ul className="submenu">
+                                <li><Link to="/ProposalTemplate" className="sub-menu-item">Proposal Details Page</Link></li>
+                                <li><Link to="/Members" className="sub-menu-item">Members</Link></li>
+                            </ul>
+                        </li>
+                        <li><Link to="/Communities2" className="sub-menu-item">All Communities</Link></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
 
 
 

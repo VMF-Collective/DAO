@@ -5,11 +5,18 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   base: '',
   plugins: [react()],
+  build:{
+    outDir:"public", 
+    sourcemap:true
+  },
   server: {
     host: '0.0.0.0',
   },
   define: {
     global: "globalThis",
-    "process.env": {},
+    "process.env": {
+      NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+      
+    },
   },
 })

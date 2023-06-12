@@ -1,0 +1,8 @@
+{
+    "proposalData":{
+        "proposalId": {
+            "type": "string",
+            "description": "Proposal ID"
+        }
+        }
+}        

@@ -2,7 +2,7 @@ import { useAddress, ConnectWallet, Web3Button, useContract, useNFTBalance } fro
 import { useState, useEffect, useMemo } from 'react';
 // theme files
 
-import Navbar2 from './components/Navbar2';
+import Navbar2 from './components/Navbar';
 
 
 import  Footer  from './components/Footer';
@@ -21,12 +21,8 @@ import ProposalTemplate from './pages/ProposalTemplate';
 import CreateProposal from './pages/CreateProposal';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-// import './index.css';
-
-// Move to comments component
-import './styles/Comments.css';
-
-
+// Theme CSS files
+import './styles/line.css';
 import './assets/themes/appgen/css/bootstrap.min.css';
 import './assets/themes/appgen/css/materialdesignicons.min.css';
 import './assets/themes/appgen/css/tobii.min.css';

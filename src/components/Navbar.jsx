@@ -1,17 +1,20 @@
-// import { ConnectWallet } from '@thirdweb-dev/react';
+import { ConnectWallet } from '@thirdweb-dev/react';
 import { Link } from 'react-router-dom';
-
 export default function Navbar() {
+    const imgPath = "assets/imgs/";
     return (
         <header id="topnav" className="defaultscroll sticky bg-white">
             <div className="container">
                 <div>
                     <a className="logo" href="index.html">
-                        <img src="/src/assets/imgs/logo.png" height={52} alt="" />
+                        <img src={imgPath + 'logo.png'}  height={52} alt="" />
                     </a>
                 </div>
-                <div className="buy-button">
+                {/* <div className="buy-button">
                 <Link to="/Join" className="btn btn-primary">Join a Community</Link>
+                </div> */}
+                <div className="buy-button">
+                <ConnectWallet/>
                 </div>
               
                 <div className="menu-extras">
@@ -43,7 +46,9 @@ export default function Navbar() {
                                 <li><Link to="/Members" className="sub-menu-item">Members</Link></li>
                             </ul>
                         </li>
-                        <li><Link to="/Communities2" className="sub-menu-item">All Communities</Link></li>
+                        <li><Link to="/Communities" className="sub-menu-item">All Communities</Link></li>
+                        <li><Link to="/Join" className="sub-menu-item">Join a Community </Link></li>
+
                     </ul>
                 </div>
             </div>

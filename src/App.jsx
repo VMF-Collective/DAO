@@ -13,6 +13,7 @@ import Dashboard from './pages/Dashboard';
 import Home from './pages/Home';
 import Members from './pages/Members';
 import Communities2 from './pages/Communities2';
+import Communities from './pages/Communities';
 import MyCommunity from './pages/MyCommunity';
 import CommunityBK from './pages/CommunityBK';
 import Join from './pages/Join';
@@ -56,6 +57,7 @@ const App = () => {
           <Route path="/Vote" element={<Vote />} />
           <Route path="/Members" element={<Members />} />
           <Route path="/Communities2" element={<Communities2 />} />
+          <Route path="/Communities" element={<Communities />} />
           <Route path="/MyCommunity" element={<MyCommunity />} />
           <Route path="/CommunityBK" element={<CommunityBK />} />
           <Route path="/Join" element={<Join />} />

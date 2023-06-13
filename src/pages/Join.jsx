@@ -19,6 +19,15 @@ export default function Join() {
                 <form className="login-form">
                   <div className="row">
                     <div className="col-12">
+                    <div className="mb-3">                                               
+                        <label className="my-1 mr-2" for="inlineFormCustomSelectPref">Pick Your Community</label>
+                        <select className="my-1 mr-sm-2 form-control" id="inlineFormCustomSelectPref">
+                          <option selected>Select your Community</option>
+                          <option value="1">Westend</option>
+                          <option value="2">Lrgacy     </option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
                       <div className="mb-3">                                               
                         <label className="form-label small fw-bold">First name <span className="text-danger">*</span></label>
                         <input type="text" className="form-control" name="s" required placeholder="First Name :" />

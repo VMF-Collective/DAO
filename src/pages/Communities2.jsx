@@ -1,3 +1,4 @@
+// Static Communities page
 export default function Features(){
 
   const imgPath = "/assets/imgs/";

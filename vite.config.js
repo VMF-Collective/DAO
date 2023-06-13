@@ -16,7 +16,20 @@ export default defineConfig({
     global: "globalThis",
     "process.env": {
       NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-      
     },
+
   },
+
+  //   define: {
+  //   global: (() => {
+  //     let globalVariable = 'globalThis';
+  //     try {
+  //       require.resolve('@safe-global/safe-ethers-adapters');
+  //       globalVariable = 'global';
+  //      } catch (e) {
+  //       globalVariable = 'globalThis';
+  //      }
+  //     return globalVariable;
+  //    })()
+  //  }
 })

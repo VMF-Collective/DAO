@@ -24,8 +24,8 @@ export default function Join() {
                         <select className="my-1 mr-sm-2 form-control" id="inlineFormCustomSelectPref">
                           <option selected>Select your Community</option>
                           <option value="1">Westend</option>
-                          <option value="2">Lrgacy     </option>
-                          <option value="3">Three</option>
+                          <option value="2">Legacy Park     </option>
+                          <option value="3">Not Listed</option>
                         </select>
                       </div>
                       <div className="mb-3">                                               

@@ -214,42 +214,31 @@ export default function MyCommunity() {
     );
   } else {
     return (
-      // map over communityData and display each community
-
-
-
       <div className='container'>
         <div className="row">
           <div className="col-sm text-center">
-          <h1>My Community Show Community and all proposals</h1>
-            </div>
+            <h1>My Community Show Community and all proposals</h1>
+          </div>
         </div>
-        
-        <div className="row row-cols-1 row-cols-md-2 g-4">
-  <div className="col">
-    <div className="card">
-      <img src={communityData.img} className="card-img-top" alt="..."/>
-      <div className="card-body">
-        <h5 className="card-title">{communityData.name}</h5>
-        <p className="card-text">{communityData.description}</p>
-      </div>
-    </div>
-  </div>
 
+        {/* SideBar */}
+        <div className="row">
+          <div className="col-lg-4">
+            <div className="card">
+              <img src={communityData.img} className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h5 className="card-title">{communityData.name}</h5>
+                <p className="card-text">{communityData.description}</p>
+              </div>
+            </div>
+          </div>
 
+          {/* SideBar */}
+          <div className='col-lg-8'>
+            <h1>All Proposals</h1>
 
-</div>
-
-
-
-
-
-
-
-
-
-
-
+          </div>
+        </div>
 
       </div>
     );

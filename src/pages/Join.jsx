@@ -8,7 +8,7 @@ export default function Join() {
           <div className="row justify-content-center">
             <div className="col-lg-5 col-md-8">
               <div className="text-center">
-                <a href="javascript:void(0)">
+                <a href="">
                   <img src="images/logo-dark.png" height={25} alt="" />
                 </a>
               </div>

@@ -2,7 +2,7 @@ import { useAddress, ConnectWallet, Web3Button, useContract, useNFTBalance } fro
 import { useState, useEffect, useMemo } from 'react';
 // theme files
 
-import Navbar2 from './components/Navbar';
+import Navbar from './components/Navbar';
 
 
 import  Footer  from './components/Footer';
@@ -29,28 +29,11 @@ import './assets/themes/appgen/css/materialdesignicons.min.css';
 import './assets/themes/appgen/css/tobii.min.css';
 import './assets/themes/appgen/css/style.css';
 
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyDXNN19o3AWZOPdMqpUtMtqZPgNOEiDX4w",
-  authDomain: "vmf-dao.firebaseapp.com",
-  projectId: "vmf-dao",
-  storageBucket: "vmf-dao.appspot.com",
-  messagingSenderId: "155377287746",
-  appId: "1:155377287746:web:653c3327b6b27d383263db"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
 
 const App = () => {
   return (
     <div className="container---">
-      <Navbar2 />
+      <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Dashboard" element={<Dashboard />} />

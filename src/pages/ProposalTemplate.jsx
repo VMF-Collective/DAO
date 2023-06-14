@@ -47,10 +47,10 @@ export default function ProjectTemplate() {
                 <div className="card-body p-4">
                   <div className="post-meta d-flex justify-content-between mb-4">
                     <ul className="list-unstyled mb-0">
-                      <li className="list-inline-item me-2 mb-0"><a href="javascript:void(0)" className="text-muted like"><i data-feather="heart" className="fea icon-sm" /> 33</a></li>
-                      <li className="list-inline-item"><a href="javascript:void(0)" className="text-muted comments"><i data-feather="message-circle" className="fea icon-sm" /> 08</a></li>
+                      <li className="list-inline-item me-2 mb-0"><a href="" className="text-muted like"><i data-feather="heart" className="fea icon-sm" /> 33</a></li>
+                      <li className="list-inline-item"><a href="" className="text-muted comments"><i data-feather="message-circle" className="fea icon-sm" /> 08</a></li>
                     </ul>
-                    <a href="javascript:void(0)" className="text-muted"><i data-feather="tag" className="fea icon-sm" /> Designing</a>
+                    <a href="" className="text-muted"><i data-feather="tag" className="fea icon-sm" /> Designing</a>
                   </div>
                   <p className="text-muted">The most well-known dummy text is the 'Lorem Ipsum', which is said to have originated in the 16th century. Lorem Ipsum is composed in a pseudo-Latin language which more or less corresponds to 'proper' Latin. It contains a series of real Latin words. This ancient dummy text is also incomprehensible, but it imitates the rhythm of most European languages in Latin script.</p>
                   <p className="text-muted mb-4">The advantage of its Latin origin and the relative meaninglessness of Lorum Ipsum is that the text does not attract attention to itself or distract the viewer's attention from the layout.</p>

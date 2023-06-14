@@ -18,10 +18,10 @@ export default function Footer(){
                 </a>
                 <p className="text-muted para-desc mx-auto mt-3"> Public Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap4 html page.</p>
                 <ul className="list-unstyled social-icon social mb-0 mt-4">
-                  <li className="list-inline-item"><a href="javascript:void(0)" className="rounded"><i data-feather="facebook" className="fea icon-sm fea-social" /></a></li>
-                  <li className="list-inline-item"><a href="javascript:void(0)" className="rounded"><i data-feather="instagram" className="fea icon-sm fea-social" /></a></li>
-                  <li className="list-inline-item"><a href="javascript:void(0)" className="rounded"><i data-feather="twitter" className="fea icon-sm fea-social" /></a></li>
-                  <li className="list-inline-item"><a href="javascript:void(0)" className="rounded"><i data-feather="linkedin" className="fea icon-sm fea-social" /></a></li>
+                  <li className="list-inline-item"><a href="" className="rounded"><i data-feather="facebook" className="fea icon-sm fea-social" /></a></li>
+                  <li className="list-inline-item"><a href="" className="rounded"><i data-feather="instagram" className="fea icon-sm fea-social" /></a></li>
+                  <li className="list-inline-item"><a href="" className="rounded"><i data-feather="twitter" className="fea icon-sm fea-social" /></a></li>
+                  <li className="list-inline-item"><a href="" className="rounded"><i data-feather="linkedin" className="fea icon-sm fea-social" /></a></li>
                 </ul>{/*end icon*/}
               </div>
             </div>

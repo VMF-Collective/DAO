@@ -1,5 +1,6 @@
 // start new file
 export default function CreateProposal() {
+  
   return (
     <>
     <h1>Create Proposal</h1>

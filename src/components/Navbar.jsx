@@ -20,7 +20,7 @@ export default function Navbar() {
                 <div className="menu-extras">
                     <div className="menu-item">
                         {/* Mobile menu toggle*/}
-                        <a className="navbar-toggle" id="isToggle" onclick="toggleMenu()">
+                        <a className="navbar-toggle" id="isToggle">
                             <div className="lines">
                                 <span />
                                 <span />
@@ -40,13 +40,13 @@ export default function Navbar() {
                         <Link to="/" className="sub-menu-item">Home</Link>
                         </li>
                         <li className="has-submenu parent-menu-item">
-                            <a href="javascript:void(0)">My Community</a><span className="menu-arrow" />
+                            <a href="">My Community</a><span className="menu-arrow" />
                             <ul className="submenu">
                                 <li><Link to="/ProposalTemplate" className="sub-menu-item">Proposal Details Page</Link></li>
                                 <li><Link to="/Members" className="sub-menu-item">Members</Link></li>
                             </ul>
                         </li>
-                        <li><Link to="/Communities" className="sub-menu-item">All Communities</Link></li>
+                        <li><Link to="/Communities2" className="sub-menu-item">All Communities</Link></li>
                         <li><Link to="/Join" className="sub-menu-item">Join a Community </Link></li>
 
                     </ul>

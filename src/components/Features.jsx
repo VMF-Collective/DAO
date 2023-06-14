@@ -25,9 +25,9 @@ export default function Features(){
                   <img src={imgPath + '/shape-1.png'} className="avatar avatar-small icon-shape" alt="" />
                 </div>
                 <div className="content mt-4">
-                  <h5><a href="javascript:void(0)" className="title text-dark"> {imgPath}Create Account</a></h5>
+                  <h5><a href="" className="title text-dark"> {imgPath}Create Account</a></h5>
                   <p className="text-muted">Due to its widespread use as filler text for layouts, non-readability is of great importance</p>
-                  <a href="javascript:void(0)" className="text-primary">Read More <i data-feather="chevron-right" className="fea icon-sm" /></a>
+                  <a href="" className="text-primary">Read More <i data-feather="chevron-right" className="fea icon-sm" /></a>
                 </div>
               </div>
             </div>
@@ -40,9 +40,9 @@ export default function Features(){
                   <img src={imgPath + '/shape-1.png'} className="avatar avatar-small icon-shape" alt="" />
                 </div>
                 <div className="content mt-4">
-                  <h5><a href="javascript:void(0)" className="title text-dark">Join Community</a></h5>
+                  <h5><a href="" className="title text-dark">Join Community</a></h5>
                   <p className="text-muted">Due to its widespread use as filler text for layouts, non-readability is of great importance</p>
-                  <a href="javascript:void(0)" className="text-primary">Read More <i data-feather="chevron-right" className="fea icon-sm" /></a>
+                  <a href="" className="text-primary">Read More <i data-feather="chevron-right" className="fea icon-sm" /></a>
                 </div>
               </div>
             </div>
@@ -55,9 +55,9 @@ export default function Features(){
                   <img src={imgPath + '/shape-1.png'} className="avatar avatar-small icon-shape" alt="" />
                 </div>
                 <div className="content mt-4">
-                <h5><a href="javascript:void(0)" className="title text-dark">Vote on Proposals</a></h5>
+                <h5><a href="" className="title text-dark">Vote on Proposals</a></h5>
                   <p className="text-muted">Due to its widespread use as filler text for layouts, non-readability is of great importance</p>
-                  <a href="javascript:void(0)" className="text-primary">Read More <i data-feather="chevron-right" className="fea icon-sm" /></a>
+                  <a href="" className="text-primary">Read More <i data-feather="chevron-right" className="fea icon-sm" /></a>
                 </div>
               </div>
             </div>
@@ -79,7 +79,7 @@ export default function Features(){
             <h5 className="title mb-4">Perfect Solution for <br /> Your Dashboard</h5>
             <p className="text-muted para-desc">Launch your campaign and benefit from our expertise on designing and managing conversion centered bootstrap4 html page.</p>
             <div className="mt-4 pt-2">
-              <a href="javascript:void(0)" className="btn btn-primary">Get Started</a>
+              <a href="" className="btn btn-primary">Get Started</a>
             </div>
           </div>
         </div>
@@ -110,15 +110,15 @@ export default function Features(){
                 <h4 className="title mb-4 mt-2">Available for your <br /> Smartphones</h4>
                 <p className="text-muted para-desc mb-0">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
                 <div className="mt-4 mb-4">
-                  <a href="javascript:void(0)" className="btn btn-pills btn-lg btn-primary mt-2 me-2"><i className="mdi mdi-apple" /> App Store</a>
-                  <a href="javascript:void(0)" className="btn btn-pills btn-lg btn-primary mt-2"><i className="mdi mdi-google-play" /> Play Store</a>
+                  <a href="" className="btn btn-pills btn-lg btn-primary mt-2 me-2"><i className="mdi mdi-apple" /> App Store</a>
+                  <a href="" className="btn btn-pills btn-lg btn-primary mt-2"><i className="mdi mdi-google-play" /> Play Store</a>
                 </div>
                 <div className="d-inline-block">
                   <div className="pt-4 d-flex align-items-center border-top">
                     <i data-feather="smartphone" className="fea icon-md me-2 text-primary" />
                     <div className="content">
                       <p className="mb-0">Install app now on your cellphones</p>
-                      <a href="javascript:void(0)" className="text-primary small">Learn More <i className="mdi mdi-arrow-right" /></a> 
+                      <a href="" className="text-primary small">Learn More <i className="mdi mdi-arrow-right" /></a> 
                     </div>
                   </div>
                 </div>

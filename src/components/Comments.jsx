@@ -16,7 +16,7 @@ export default function Comments (){
                             <img src={imgPath + '/client/01.jpg' } className="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="img" />
                           </a>
                           <div className="commentor-detail">
-                            <h6 className="mb-0"><a href="javascript:void(0)" className="text-dark media-heading">Lorenzo Peterson</a></h6>
+                            <h6 className="mb-0"><a href="" className="text-dark media-heading">Lorenzo Peterson</a></h6>
                             <small className="text-muted">15th August, 2019 at 01:25 pm</small>
                           </div>
                         </div>
@@ -33,7 +33,7 @@ export default function Comments (){
                             <img src={imgPath + '/client/02.jpg' } className="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="img" />
                           </a>
                           <div className="commentor-detail">
-                            <h6 className="mb-0"><a href="javascript:void(0)" className="media-heading text-dark">Tammy Camacho</a></h6>
+                            <h6 className="mb-0"><a href="" className="media-heading text-dark">Tammy Camacho</a></h6>
                             <small className="text-muted">15th August, 2019 at 05:44 pm</small>
                           </div>
                         </div>
@@ -50,7 +50,7 @@ export default function Comments (){
                             <img src={imgPath + '/client/03.jpg' } className="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="img" />
                           </a>
                           <div className="commentor-detail">
-                            <h6 className="mb-0"><a href="javascript:void(0)" className="media-heading text-dark">Tammy Camacho</a></h6>
+                            <h6 className="mb-0"><a href="" className="media-heading text-dark">Tammy Camacho</a></h6>
                             <small className="text-muted">16th August, 2019 at 03:44 pm</small>
                           </div>
                         </div>
@@ -67,7 +67,7 @@ export default function Comments (){
                                 <img src={imgPath + '/client/01.jpg' } className="img-fluid avatar avatar-md-sm rounded-circle shadow" alt="img" />
                               </a>
                               <div className="commentor-detail">
-                                <h6 className="mb-0"><a href="javascript:void(0)" className="text-dark media-heading">Lorenzo Peterson</a></h6>
+                                <h6 className="mb-0"><a href="" className="text-dark media-heading">Lorenzo Peterson</a></h6>
                                 <small className="text-muted">17th August, 2019 at 01:25 pm</small>
                               </div>
                             </div>

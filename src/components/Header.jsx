@@ -17,7 +17,7 @@ export default function Header(){
                 <h1 className="heading mb-3">Community DAO</h1>
                 <p className="para-desc text-muted">ith this DAO, philanthropic organizations can give the money directly to a fund that residents have direct access to so that they can vote on their goals, priorities, metrics, and service providers, all while being able to automate data tracking and provide live feedback.</p>
                 <div className="mt-4">
-                  <a href="javascript:void(0)" className="btn btn-pills btn-primary">Get Started</a>
+                  <a href="" className="btn btn-pills btn-primary">Get Started</a>
                 </div>
               </div>
             </div>{/*end col*/}

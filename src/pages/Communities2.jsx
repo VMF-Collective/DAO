@@ -49,9 +49,8 @@ export default function Communities2(){
     getCommunities();
   }, []);
 
-
-  // adding document to collection
   return (
+    <>
     <section className="section" id="blog">
     <div className="container">
       <div className="row">
@@ -60,39 +59,28 @@ export default function Communities2(){
 
       <div className="row">
 
-        {communities.map((community) => {
-          
-          return (
-            <div className="col-lg-4 col-md-6 col-12 mb-4 pb-2">
-            <div className="card blog-post border-0 rounded overflow-hidden shadow">
-            <img src={community.img} className="img-fluid" alt="missing-image" />
-            <div className="card-body p-4">
-              <h5 className="mb-3"><a href="" className="text-dark title">{community.name}</a></h5>
+    
 
-              <p className="text-muted">{community.description}</p>
-              <a href="#" className="text-primary h6">Read More <i data-feather="arrow-right" className="fea icon-sm" /></a>
-            </div>
-          </div>
-          </div>
-            )
-           
-            })}
+{communities.map((community) => (
+  <React.Fragment key={community.id}>
+    <div className="col-lg-4 col-md-6 col-12 mb-4 pb-2">
+      <div className="card blog-post border-0 rounded overflow-hidden shadow">
+        <img src={community.img} className="img-fluid" alt="missing-image" />
+        <div className="card-body p-4">
+          <h5 className="mb-3"><a href={`/communities/${community.slug}`} className="text-dark title">{community.name}</a></h5>
+          <p className="text-muted">{community.description}</p>
+          <button href={`/communities/${community.slug}`} className="text-primary h6">More Info<i data-feather="arrow-right" className="fea icon-sm" /></button>
+        </div>
+      </div>
+    </div>
+  </React.Fragment>
+))}
+
             
             <div className="col-lg-4 col-md-6 col-12 mb-4 pb-2">
               <AddCommunity />
-
               </div>
-
-            
-
             </div>
-
-
-
-
-       
-
-
         <div className="row">
         <div className="col-12">
           <ul className="pagination justify-content-center mb-0">
@@ -107,7 +95,6 @@ export default function Communities2(){
     </div>
   </section>
 
-
-
+  </>
   )
 }

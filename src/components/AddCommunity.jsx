@@ -7,17 +7,12 @@ export default function AddCommunity() {
 <div className="row">
   <div className="col-12">
   <div className="mb-3">                                               
-      <label className="my-1 mr-2" for="inlineFormCustomSelectPref">Pick Your Community</label>
-      <select className="my-1 mr-sm-2 form-control" id="inlineFormCustomSelectPref">
-        <option selected>Select your Community</option>
-        <option value="1">Westend</option>
-        <option value="2">Legacy Park     </option>
-        <option value="3">Not Listed</option>
-      </select>
+      <label className="my-1 mr-2" htmlFor="inlineFormCustomSelectPref">Create a Community</label>
+  
     </div>
     <div className="mb-3">                                               
-      <label className="form-label small fw-bold">First name <span className="text-danger">*</span></label>
-      <input type="text" className="form-control" name="s" required placeholder="First Name :" />
+      <label className="form-label small fw-bold">Community Name <span className="text-danger">*</span></label>
+      <input type="text" className="form-control" name="s" required placeholder="Community Name:" />
     </div>
   </div>
   <div className="col-12">
@@ -26,18 +21,7 @@ export default function AddCommunity() {
       <input type="email" className="form-control" name="email" required placeholder="Your Email :" />
     </div>
   </div>
-  <div className="col-12">
-    <div className="mb-3">
-      <label className="form-label small fw-bold">Password <span className="text-danger">*</span></label>
-      <input type="password" className="form-control" required placeholder="Password :" />
-    </div>
-  </div>
-  <div className="col-12">
-    <div className="mb-3">
-      <label className="form-label small fw-bold">Confirm Password <span className="text-danger">*</span></label>
-      <input type="password" className="form-control" required placeholder="Confirm Password :" />
-    </div>
-  </div>
+
   <div className="col-12">
     <div className="mb-3">
       <div className="form-check">
@@ -47,24 +31,11 @@ export default function AddCommunity() {
     </div>
   </div>
   <div className="col-12">
-    <button className="btn btn-primary w-100">Register</button>
+    <button className="btn btn-primary w-100">Create Community</button>
   </div>
-  <div className="col-12 mt-4 text-center">
-    <h6>Or Signup With</h6>
-  </div>
-  <div className="col-12">
-    <div className="row">
-      <div className="col-sm-6 mt-4">
-        <a href="#" className="btn w-100 btn-light"><i className="mdi mdi-facebook text-primary" /> Facebook</a>
-      </div>
-      <div className="col-sm-6 mt-4">
-        <a href="#" className="btn w-100 btn-light"><i className="mdi mdi-google text-danger" /> Google</a>
-      </div>
-    </div>
-  </div>
-  <div className="mx-auto">
-    <p className="mb-0 mt-3"><small className="text-dark me-2">Already have an account ?</small> <a href="login.html" className="text-dark fw-bold">Sign in</a></p>
-  </div>
+
+
+
 </div>
 </form>
 

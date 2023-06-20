@@ -12,12 +12,12 @@ export const API_URL = 'http://localhost:3000/api/v1';
   );
 
   export const firebaseConfig = {
-  apiKey: "AIzaSyDXNN19o3AWZOPdMqpUtMtqZPgNOEiDX4w",
+  apiKey: "",
   authDomain: "vmf-dao.firebaseapp.com",
   databaseURL: "https://vmf-dao-default-rtdb.firebaseio.com",
   projectId: "vmf-dao",
   storageBucket: "vmf-dao.appspot.com",
-  messagingSenderId: "155377287746",
+  messagingSenderId: "",
   appId: "1:155377287746:web:653c3327b6b27d383263db",
   measurementId: "G-NF6PRHWV7M"
 };

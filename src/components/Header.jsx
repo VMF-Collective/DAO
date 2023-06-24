@@ -1,9 +1,7 @@
 import { ConnectWallet } from '@thirdweb-dev/react';
 
-
-
 export default function Header(){
-  const imgPath = '/assets/imgs/';
+  const imgPath = 'src/assets/imgs/';
     return (
         <section className="bg-half-170 d-table w-100 overflow-hidden" id="home">
         <div className="container">

@@ -3,8 +3,6 @@ import { useState, useEffect, useMemo } from 'react';
 // theme files
 
 import Navbar from './components/Navbar';
-
-
 import  Footer  from './components/Footer';
 import { Route, Routes } from 'react-router-dom';
 
@@ -28,11 +26,11 @@ import './assets/themes/appgen/css/bootstrap.min.css';
 import './assets/themes/appgen/css/materialdesignicons.min.css';
 import './assets/themes/appgen/css/tobii.min.css';
 import './assets/themes/appgen/css/style.css';
-
+import './style.css';
 
 const App = () => {
   return (
-    <div className="container---">
+    <div className="container">
       <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

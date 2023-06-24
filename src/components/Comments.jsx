@@ -3,11 +3,11 @@
 
 export default function Comments (){
 
-    const imgPath = "/assets/imgs/";
+    const imgPath = "src/assets/imgs/";
     return (
 
         <>
-                          <h5 className="card-title mb-0 pt-4 border-top">Comments :</h5>
+                <h5 className="card-title mb-0 pt-4 border-top">Comments :</h5>
                   <ul className="media-list list-unstyled mb-4">
                     <li className="mt-4">
                       <div className="d-flex justify-content-between">

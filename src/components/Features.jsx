@@ -3,7 +3,7 @@ import { ConnectWallet } from '@thirdweb-dev/react';
 
 
 export default function Features(){
-  const imgPath = "/assets/imgs/";
+  const imgPath = "src/assets/imgs/";
     return (
       <>
       <section className="section" id="service">
@@ -25,7 +25,7 @@ export default function Features(){
                   <img src={imgPath + '/shape-1.png'} className="avatar avatar-small icon-shape" alt="" />
                 </div>
                 <div className="content mt-4">
-                  <h5><a href="" className="title text-dark"> {imgPath}Create Account</a></h5>
+                  <h5><a href="" className="title text-dark">Create Account</a></h5>
                   <p className="text-muted">Due to its widespread use as filler text for layouts, non-readability is of great importance</p>
                   <a href="" className="text-primary">Read More <i data-feather="chevron-right" className="fea icon-sm" /></a>
                 </div>

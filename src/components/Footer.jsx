@@ -1,11 +1,6 @@
 
-
-
 export default function Footer(){
-
-  const imgPath = '/assets/imgs/';
-  // const imgPath = process.env.ASSET_URL + '/assets/imgs/logo.png';
-
+  const imgPath = 'src/assets/imgs/';
     return (
       <div>
       <footer className="bg-dark py-5">

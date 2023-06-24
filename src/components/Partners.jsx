@@ -3,7 +3,7 @@ import { ConnectWallet } from '@thirdweb-dev/react';
 
 
 export default function Partners(){
-    const imgPath = '/assets/imgs/';
+    const imgPath = 'src/assets/imgs/';
     
     return (
 <section className="py-4 border-top border-bottom position-relative">

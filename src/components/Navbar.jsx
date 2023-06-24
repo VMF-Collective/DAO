@@ -1,12 +1,27 @@
 import { ConnectWallet } from '@thirdweb-dev/react';
 import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 export default function Navbar() {
-    const imgPath = "assets/imgs/";
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+    const imgPath = "src/assets/imgs/";
+
+    const toggleMenu = () => {
+    setIsMenuOpen(prevIsMenuOpen => !prevIsMenuOpen);
+     };
+
+    const toggleSubMenu = () => {
+    setIsSubMenuOpen(prevIsSubMenuOpen => !prevIsSubMenuOpen);
+    };
+
+    
+
+   
     return (
         <header id="topnav" className="defaultscroll sticky bg-white">
             <div className="container">
-                <div>
-                    <a className="logo" href="index.html">
+                <div className='logoDiv'>
+                    <a className="logo" href="/">
                         <img src={imgPath + 'logo.png'}  height={52} alt="" />
                     </a>
                 </div>
@@ -16,48 +31,37 @@ export default function Navbar() {
                 <div className="buy-button">
                 <ConnectWallet/>
                 </div>
-              
+                
                 <div className="menu-extras">
                     <div className="menu-item">
-                        {/* Mobile menu toggle*/}
-                        <a className="navbar-toggle" id="isToggle">
+                        <a className="navbar-toggle" id="isToggle" onClick={toggleMenu} >
                             <div className="lines">
                                 <span />
                                 <span />
                                 <span />
                             </div>
                         </a>
-                        {/* End mobile menu toggle*/}
                     </div>
-                </div>
-                <div id="navigation" style={{display: "block"}}>
-
-    
-                 
-
+                
+                <div id="navigation"  style={{ display: isMenuOpen ? 'block' : 'none' }}>
                     <ul className="navigation-menu">
                         <li className="has-submenu parent-menu-item">
                         <Link to="/" className="sub-menu-item">Home</Link>
                         </li>
                         <li className="has-submenu parent-menu-item">
-                            <a href="">My Community</a><span className="menu-arrow" />
-                            <ul className="submenu">
+                        <a href="#" onClick={toggleSubMenu}>My Community</a><span className="menu-arrow" />
+                        <ul className={`submenu ${isSubMenuOpen ? 'open' : ''}`}>
                                 <li><Link to="/ProposalTemplate" className="sub-menu-item">Proposal Details Page</Link></li>
                                 <li><Link to="/Members" className="sub-menu-item">Members</Link></li>
                             </ul>
                         </li>
                         <li><Link to="/Communities2" className="sub-menu-item">All Communities</Link></li>
                         <li><Link to="/Join" className="sub-menu-item">Join a Community </Link></li>
-
                     </ul>
                 </div>
+                </div>
             </div>
-        </header>
-
-
-
-
-
+        </header>  
+              
     )
-
 }

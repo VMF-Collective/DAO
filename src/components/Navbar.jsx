@@ -1,22 +1,20 @@
 import { ConnectWallet } from '@thirdweb-dev/react';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
+
 export default function Navbar() {
+    
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
     const imgPath = "src/assets/imgs/";
 
     const toggleMenu = () => {
-    setIsMenuOpen(prevIsMenuOpen => !prevIsMenuOpen);
-     };
-
+        setIsMenuOpen(prevIsMenuOpen => !prevIsMenuOpen);
+    };
     const toggleSubMenu = () => {
-    setIsSubMenuOpen(prevIsSubMenuOpen => !prevIsSubMenuOpen);
+        setIsSubMenuOpen(prevIsSubMenuOpen => !prevIsSubMenuOpen);
     };
 
-    
-
-   
     return (
         <header id="topnav" className="defaultscroll sticky bg-white">
             <div className="container">
@@ -34,7 +32,7 @@ export default function Navbar() {
                 
                 <div className="menu-extras">
                     <div className="menu-item">
-                        <a className="navbar-toggle" id="isToggle" onClick={toggleMenu} >
+                        <a className="navbar-toggle" onClick={toggleMenu} >
                             <div className="lines">
                                 <span />
                                 <span />

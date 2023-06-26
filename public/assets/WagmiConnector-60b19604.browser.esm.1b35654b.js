@@ -1,2 +1,0 @@
-import{aO as r,aF as t,aP as a}from"./index.5c959672.js";class p extends r{constructor(s){let{chains:i=a,options:e}=s;super(),t(this,"id",void 0),t(this,"name",void 0),t(this,"chains",void 0),t(this,"options",void 0),t(this,"ready",void 0),this.chains=i,this.options=e}getBlockExplorerUrls(s){var e,n;const i=(n=(e=s.explorers)==null?void 0:e.map(o=>o.url))!=null?n:[];return i.length>0?i:void 0}isChainUnsupported(s){return!this.chains.some(i=>i.chainId===s)}updateChains(s){this.chains=s}}export{p as W};
-//# sourceMappingURL=WagmiConnector-60b19604.browser.esm.1b35654b.js.map

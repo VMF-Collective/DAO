@@ -17,9 +17,8 @@ export default defineConfig({
   //   "process.env": {
   //     NODE_ENV: JSON.stringify(process.env.NODE_ENV),
   //   },
-
   // },
-
+ // For Build 
     define: {
     global: (() => {
       let globalVariable = 'globalThis';

@@ -2,7 +2,22 @@
 
 'npm install'
 
+
+
 'npm run build'
+
+## Build Files 
+public is the main build directory 
+### Move Images 
+after the build is done copy the 'imgs' from src/assets/imgs to public/assets 
+'cp -R src/assets/imgs public/assets '
+
+
+
+
+
+
+Setting New Env with Firebase 
 
 Push files to Firebase 
 'firebase deploy'

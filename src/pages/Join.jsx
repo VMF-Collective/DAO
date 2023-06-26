@@ -1,4 +1,7 @@
-// start new file
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+
+
 export default function Join() {
   return (
     <>

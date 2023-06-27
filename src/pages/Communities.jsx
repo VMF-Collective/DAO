@@ -1,31 +1,48 @@
-import { useAddress, ConnectWallet, Web3Button, useContract, useNFTBalance, ThirdwebNftMedia, useNFT } from '@thirdweb-dev/react';
-import { useState, useEffect, useMemo } from 'react';
+import {
+  useAddress,
+  ConnectWallet,
+  Web3Button,
+  useContract,
+  useNFTBalance,
+  ThirdwebNftMedia,
+  useNFT,
+} from "@thirdweb-dev/react";
+import { useState, useEffect, useMemo } from "react";
 import { AddressZero } from "@ethersproject/constants";
-import { Link } from 'react-router-dom';
-import { addresses } from '../constants/addresses';
-import { proposalData } from '../constants/proposalData';
-import { communityData, communityData2 } from '../constants/communityData';
-import { Log } from '../constants/constants';
+import { Link } from "react-router-dom";
+import { addresses } from "../constants/addresses";
+import { proposalData } from "../constants/proposalData";
+import { communityData, communityData2 } from "../constants/communityData";
+// import { Log } from '../constants/constants';
 
 export default function Communities() {
   const address = useAddress();
   const editionDropAddress = "0x364f65C9309BCCC0998B7B8aEb9410FD26ead3f1";
-  const { contract: editionDrop } = useContract(editionDropAddress, "edition-drop");
-  const { contract: token } = useContract('0x1E1aECDC3C932c4B3490203326A3e2e178C94315', 'token');
-  const { contract: vote } = useContract("0x2FDaBe3f3Eaa7c6442faD20ccDF632280a46ef56", "vote");
+  const { contract: editionDrop } = useContract(
+    editionDropAddress,
+    "edition-drop"
+  );
+  const { contract: token } = useContract(
+    "0x1E1aECDC3C932c4B3490203326A3e2e178C94315",
+    "token"
+  );
+  const { contract: vote } = useContract(
+    "0x2FDaBe3f3Eaa7c6442faD20ccDF632280a46ef56",
+    "vote"
+  );
 
-  const { contract } = useContract("0x364f65C9309BCCC0998B7B8aEb9410FD26ead3f1");
+  const { contract } = useContract(
+    "0x364f65C9309BCCC0998B7B8aEb9410FD26ead3f1"
+  );
   const tokenId = 0;
   const { data: nft, isLoading, error } = useNFT(contract, tokenId);
   // const { data: metadata, isLoading: loadingMetadata } = useContractMetadata(contract);
 
   // Hook to check if the user has our NFT
-  const { data: nftBalance } = useNFTBalance(editionDrop, address, "0")
+  const { data: nftBalance } = useNFTBalance(editionDrop, address, "0");
   const hasClaimedNFT = useMemo(() => {
     return nftBalance && nftBalance.gt(0);
-
-  }, [nftBalance])
-
+  }, [nftBalance]);
 
   // Holds the amount of token each member has in state.
   const [memberTokenAmounts, setMemberTokenAmounts] = useState([]);
@@ -33,7 +50,7 @@ export default function Communities() {
   const [memberAddresses, setMemberAddresses] = useState([]);
   // A fancy function to shorten someones wallet address, no need to show the whole thing.
   const shortenAddress = (str) => {
-    return str.substring(0, 6) + '...' + str.substring(str.length - 4);
+    return str.substring(0, 6) + "..." + str.substring(str.length - 4);
   };
   const [proposals, setProposals] = useState([]);
   const [isVoting, setIsVoting] = useState(false);
@@ -78,11 +95,9 @@ export default function Communities() {
         if (hasVoted) {
         } else {
         }
-      } catch (error) {
-      }
+      } catch (error) {}
     };
     checkIfUserHasVoted();
-
   }, [hasClaimedNFT, proposals, address, vote]);
 
   // member stuff sj
@@ -96,19 +111,18 @@ export default function Communities() {
     // with tokenId 0.
     const getAllAddresses = async () => {
       try {
-        const memberAddresses = await editionDrop?.history.getAllClaimerAddresses(
-          0,
-        );
+        const memberAddresses =
+          await editionDrop?.history.getAllClaimerAddresses(0);
         setMemberAddresses(memberAddresses);
-        console.log('🚀 Members addresses', memberAddresses);
+        console.log("🚀 Members addresses", memberAddresses);
       } catch (error) {
-        console.error('failed to get member list', error);
+        console.error("failed to get member list", error);
       }
     };
     getAllAddresses();
   }, [hasClaimedNFT, editionDrop?.history]);
 
-  // member stuff sj 
+  // member stuff sj
   // This useEffect grabs the # of token each member holds.
   useEffect(() => {
     if (!hasClaimedNFT) {
@@ -119,9 +133,9 @@ export default function Communities() {
       try {
         const amounts = await token?.history.getAllHolderBalances();
         setMemberTokenAmounts(amounts);
-        console.log('👜 Amounts', amounts);
+        console.log("👜 Amounts", amounts);
       } catch (error) {
-        console.error('failed to get member balances', error);
+        console.error("failed to get member balances", error);
       }
     };
     getAllBalances();
@@ -133,19 +147,18 @@ export default function Communities() {
       // We're checking if we are finding the address in the memberTokenAmounts array.
       // If we are, we'll return the amount of token the user has.
       // Otherwise, return 0.
-      const member = memberTokenAmounts?.find(({ holder }) => holder === address);
+      const member = memberTokenAmounts?.find(
+        ({ holder }) => holder === address
+      );
 
       return {
         address,
-        tokenAmount: member?.balance.displayValue || '0',
+        tokenAmount: member?.balance.displayValue || "0",
       };
     });
   }, [memberAddresses, memberTokenAmounts]);
 
-
-
   if (hasClaimedNFT) {
-
     return (
       <div className="wrapper">
         <div className="member-page">
@@ -154,7 +167,6 @@ export default function Communities() {
             <div>
               <h2>Member List</h2>
               <table className="card">
-
                 <thead>
                   <tr>
                     <th>Name</th>
@@ -182,80 +194,57 @@ export default function Communities() {
                 {proposals.map((proposal) => (
                   <div key={proposal.proposalId} className="card">
                     <h3>Proposal Title</h3>
-                    <div className='cardHead'></div>
+                    <div className="cardHead"></div>
                     <p>{proposal.description}</p>
                     <div>
-                      <button ><Link to="/ProposalTemplate">View Proposal Details</Link></button>
-
+                      <button>
+                        <Link to="/ProposalTemplate">
+                          View Proposal Details
+                        </Link>
+                      </button>
                     </div>
-
-
                   </div>
-
                 ))}
-
-
 
                 {!hasVoted && (
                   <small>
-                    This will trigger multiple transactions that you will need to
-                    sign.
+                    This will trigger multiple transactions that you will need
+                    to sign.
                   </small>
                 )}
               </form>
             </div>
           </div>
         </div>
-
-
       </div>
-
     );
   } else {
     return (
       // map over communityData and display each community
 
-
-
-      <div className='container mt-5 pt-5'>
+      <div className="container mt-5 pt-5">
         <h1>Please Join a Community</h1>
         <div className="row row-cols-1 row-cols-md-2 g-4">
-  <div className="col">
-    <div className="card">
-      <img src={communityData.img} className="card-img-top" alt="..."/>
-      <div className="card-body">
-        <h5 className="card-title">{communityData.name}</h5>
-        <p className="card-text">{communityData.description}</p>
-      </div>
-    </div>
-  </div>
-  <div className="col">
-    <div className="card">
-      <img src="..." className="card-img-top" alt="..."/>
-      <div className="card-body">
-        <h5 className="card-title">
-        <Log value={communityData2} /></h5>
-        
-        
-
-     
-      </div>
-    </div>
-  </div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
+          <div className="col">
+            <div className="card">
+              <img src={communityData.img} className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h5 className="card-title">{communityData.name}</h5>
+                <p className="card-text">{communityData.description}</p>
+              </div>
+            </div>
+          </div>
+          <div className="col">
+            <div className="card">
+              <img src="..." className="card-img-top" alt="..." />
+              <div className="card-body">
+                <h5 className="card-title">
+                  <Log value={communityData2} />
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

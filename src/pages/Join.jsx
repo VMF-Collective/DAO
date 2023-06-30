@@ -83,7 +83,6 @@ export default function Join() {
       } else {
         const q = query(collection(db, "Users"), where("email", "==", email));
         console.log(email);
-        // const q = doc(db, "Users", email);
 
         const queryProfile = await getDocs(q);
 
@@ -127,7 +126,6 @@ export default function Join() {
                 </a>
               </div>
               <div className="login-page bg-white shadow-lg rounded p-4 mt-4 position-relative">
-                <button onClick={() => auth.signOut()}>Sign Out</button>
                 <div className="text-center">
                   <h5 className="mb-4 pb-2">Join a Community</h5>
                 </div>

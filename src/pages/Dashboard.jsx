@@ -8,17 +8,15 @@ export default function Dashboard() {
 
   return (
     <>
-      <h1>Dashboard</h1>
-      {/* <h2>Coming Soon</h2> */}
-
       {user && (
-        <div>
+        <div className="bg-user-home text-center">
+          <h1>Dashboard</h1>
           <p>{user.displayName}</p>
-          <button>Sign Out</button>
+          <button onClick={() => auth.signOut()}>Sign Out</button>
         </div>
       )}
 
-      {!user && <button onClick={() => auth.signOut()}>Sign In</button>}
+      {!user && <button>Sign In</button>}
     </>
   );
 }

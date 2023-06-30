@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   margin: 0;
@@ -105,7 +109,6 @@ h1 {
   height: 180px;
   background-position: top -19px center;
   background-size: cover;
-
 }
 
 .member-page form small {
@@ -155,8 +158,6 @@ button:disabled {
   pointer-events: none;
 }
 
-
-
 .header-logo {
   width: 500px;
   margin: 100px 40px 29px;
@@ -165,7 +166,6 @@ button:disabled {
 
 .wrapper {
   width: 100%;
-
 }
 .top_bar {
   background-color: #1b2129;
@@ -188,7 +188,6 @@ button:disabled {
   padding: 5px 0 8px;
 }
 .navbar li {
-
   display: flex;
   list-style: none;
 }
@@ -200,7 +199,6 @@ button:disabled {
   margin-left: 20px;
 }
 
-
 .connect-to-wallet {
   position: absolute;
   top: 0;
@@ -209,7 +207,3 @@ button:disabled {
 img {
   max-width: 100%;
 }
-
-
-
-

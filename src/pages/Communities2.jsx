@@ -1,32 +1,20 @@
 import React, { useEffect, useState } from "react";
-// import { initializeApp } from "firebase/app";
-// import { getFirestore, collection, getDocs, addDoc } from "firebase/firestore";
-// import { firebaseConfig } from "../constants/constants.jsx";
+import { collection, getDocs, addDoc } from "firebase/firestore";
 import AddCommunity from "../components/AddCommunity.jsx";
+import { db } from "../utils/firebase.jsx";
 
 // Create a form to add a new community to firestore
 
-// Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-// const db = getFirestore();
-// const comRef = collection(db, 'Communities');
-// getDocs(comRef)
-// .then((snapshot) => {
-//   let communities = [];
-//   snapshot.forEach((doc) => {
-//     communities.push({...doc.data(), id: doc.id });
-//   });
-//   console.log(communities);
-// })
-// .catch((err) => console.log(err));
-
-// addDoc(colRef, {
-//   name: 'Community 1',
-//   img: 'https://picsum.photos/200/300',
-//   description: 'This is a community'
-// })
-// .then((docRef) => console.log(docRef))
-// .catch((err) => console.log(err));
+const comRef = collection(db, "Communities");
+getDocs(comRef)
+  .then((snapshot) => {
+    let communities = [];
+    snapshot.forEach((doc) => {
+      communities.push({ ...doc.data(), id: doc.id });
+    });
+    console.log(communities);
+  })
+  .catch((err) => console.log(err));
 
 export default function Communities2() {
   const [communities, setCommunities] = useState([]);

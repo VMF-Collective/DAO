@@ -1,7 +1,6 @@
 import { db, auth } from "../utils/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 import NonVerifiedMemberPage from "../components/NonVerifiedMemberPage";
 import PleaseSignIn from "../components/PleaseSignIn";

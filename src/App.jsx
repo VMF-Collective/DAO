@@ -22,7 +22,7 @@ import Communities from "./pages/Communities";
 import MyCommunity from "./pages/MyCommunity";
 import CommunityBK from "./pages/CommunityBK";
 import Join from "./pages/Join";
-// import Login from './pages/Login';
+import Login from "./pages/Login";
 import ProposalTemplate from "./pages/ProposalTemplate";
 import CreateProposal from "./pages/CreateProposal";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -47,6 +47,7 @@ const App = () => {
         <Route path="/Communities" element={<Communities />} />
         <Route path="/MyCommunity" element={<MyCommunity />} />
         <Route path="/CommunityBK" element={<CommunityBK />} />
+        <Route path="/Login" element={<Login />} />
         <Route path="/Join" element={<Join />} />
         <Route path="/ProposalTemplate" element={<ProposalTemplate />} />
         <Route path="/CreateProposal" element={<CreateProposal />} />

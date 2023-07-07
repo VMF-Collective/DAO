@@ -3,12 +3,12 @@ import {
   GoogleAuthProvider,
   FacebookAuthProvider,
   signInWithPopup,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
 } from "firebase/auth";
-import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import {
-  addDoc,
   collection,
   query,
   where,
@@ -21,26 +21,42 @@ import {
 export default function Join() {
   const navigate = useNavigate();
 
-  const [user, loading] = useAuthState(auth); // keep track of auth state
-
   // Google Log-In
   const googleProvider = new GoogleAuthProvider();
   const GoogleLogin = async (e) => {
     e.preventDefault();
     try {
       const result = await signInWithPopup(auth, googleProvider);
-      console.log(result.user);
-      await setDoc(doc(db, "Users", result.user.uid), {
-        bio: "",
-        community: "",
-        created: Timestamp.fromDate(new Date()),
-        email: result.user.email,
-        firstName: result.user.displayName.split(" ")[0],
-        lastName: result.user.displayName.split(" ")[1],
-        img: result.user.photoURL,
-        userType: "",
-      });
-      // navigate("/dashboard");
+
+      const q = query(
+        collection(db, "Users"),
+        where("email", "==", result.user.email)
+      );
+
+      const queryProfile = await getDocs(q);
+      console.log(queryProfile.docs);
+
+      if (queryProfile.docs.length == 0) {
+        await setDoc(doc(db, "Users", result.user.uid), {
+          bio: "",
+          community: "",
+          created: Timestamp.fromDate(new Date()),
+          email: result.user.email,
+          firstName: result.user.displayName.split(" ")[0] || "",
+          lastName: result.user.displayName.split(" ")[1] || "",
+          img: result.user.photoURL,
+          userTypeName: "Non-Verified Member",
+          userTypeNumber: 1,
+        });
+        navigate("/dashboard");
+      } else {
+        setWarning(
+          <p>
+            You already have an account. Go to your{" "}
+            <Link to="/dashboard">Dashboard</Link>
+          </p>
+        );
+      }
     } catch (error) {
       console.log(error);
     }
@@ -50,9 +66,10 @@ export default function Join() {
   const facebookProvider = new FacebookAuthProvider();
   const FacebookLogin = async () => {
     try {
-      const result = await signInWithPopup(auth, facebookProvider);
-      console.log(result.user);
-      navigate("/dashboard");
+      setWarning(<p>Please sign in another way</p>);
+      // const result = await signInWithPopup(auth, facebookProvider);
+      // console.log(result.user);
+      // navigate("/dashboard");
     } catch (error) {
       console.log(error);
     }
@@ -82,7 +99,6 @@ export default function Join() {
         setWarning("Match your password");
       } else {
         const q = query(collection(db, "Users"), where("email", "==", email));
-        console.log(email);
 
         const queryProfile = await getDocs(q);
 
@@ -92,25 +108,30 @@ export default function Join() {
         }
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       setWarning(null);
       AddUser();
-      navigate("/dashboard");
+      // navigate("/dashboard");
     }
   };
 
   // function to add user to firestore with info from registration form
-  function AddUser() {
-    addDoc(collection(db, "Users"), {
+  async function AddUser() {
+    const result = await createUserWithEmailAndPassword(auth, email, password);
+    setDoc(doc(db, "Users", result.user.uid), {
       bio: "",
       community,
-      created: "",
+      created: Timestamp.fromDate(new Date()),
       email,
       firstName,
       img: "",
-      userType: "",
+      lastName: "",
       password,
+      userTypeName: "Non-Verified Member",
+      userTypeNumber: 1,
     });
+    await signInWithEmailAndPassword(auth, email, password);
+    navigate("/dashboard");
   }
 
   return (
@@ -275,10 +296,10 @@ export default function Join() {
                       <p className="mb-0 mt-3">
                         <small className="text-dark me-2">
                           Already have an account ?
-                        </small>{" "}
-                        <a href="login.html" className="text-dark fw-bold">
+                        </small>
+                        <Link to="/Login" className="text-dark fw-bold">
                           Sign in
-                        </a>
+                        </Link>
                       </p>
                     </div>
                   </div>

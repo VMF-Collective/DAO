@@ -12,7 +12,7 @@ getDocs(comRef)
     snapshot.forEach((doc) => {
       communities.push({ ...doc.data(), id: doc.id });
     });
-    console.log(communities);
+    // console.log(communities);
   })
   .catch((err) => console.log(err));
 
